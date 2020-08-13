@@ -1,3 +1,2 @@
-# hello-world
-just the begining
-many project in different languages to follow after this.
+# Problem Solving and Coding
+This repo is dedicated to solve simple, tricky, and complex coding questions in Java.
