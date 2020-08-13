@@ -14,6 +14,11 @@ public class PalindromeStringSecondSolution {
             System.out.println("The string " +input+ " is not a palindrome");
     }
 
+    /**
+     *
+     * @param input
+     * @return
+     */
     private static boolean checkIfPalindrome(String input) {
         System.out.println(input);
         if("null".equals(input))
