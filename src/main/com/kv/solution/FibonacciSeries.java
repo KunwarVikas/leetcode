@@ -1,4 +1,4 @@
-package main.com.kv.solutions;
+package main.com.kv.solution;
 
 import java.util.Scanner;
 
