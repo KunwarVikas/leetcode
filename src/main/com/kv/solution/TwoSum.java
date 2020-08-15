@@ -24,7 +24,6 @@ public class TwoSum {
         System.out.println("Enter the numbers using space:");
         String words = sc.nextLine();
         String [] numbers = words.split("\\s");
-        System.out.println(Arrays.toString(numbers));
         int [] nums = new int[numbers.length];
         int count=0;
         for(String num : numbers){
@@ -32,7 +31,6 @@ public class TwoSum {
         }
         System.out.println("Enter the target:");
         int target = sc.nextInt();
-        System.out.println(Arrays.toString(nums) + ":" + target);
         int [] output = twoSum(nums,target);
         if(output.length==2)
         System.out.println("The words in order:" +output[0] +":" +output[1]);

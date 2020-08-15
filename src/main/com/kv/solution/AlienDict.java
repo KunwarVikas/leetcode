@@ -59,12 +59,12 @@ public class AlienDict {
         }
 
         for(int i=0;i<wordsArray.length;i++) {
-            for(int j=i+1;j>wordsArray.length;j++){
+            for(int j=i+1;j<wordsArray.length;j++){
                 int min = Math.min(wordsArray[i].length(),wordsArray[j].length());
                 for(int k=0;k<min;k++){
                     char iChar = wordsArray[i].charAt(k);
                     char jChar = wordsArray[j].charAt(k);
-                    if(alphabets[iChar-'a'] <= alphabets[jChar-'a']){
+                    if(alphabets[iChar-'a'] < alphabets[jChar-'a']){
                         break;
                     }else if(alphabets[jChar-'a'] < alphabets[iChar-'a']){
                         return false;
