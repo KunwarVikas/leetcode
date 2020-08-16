@@ -34,7 +34,7 @@ import java.util.Scanner;
  * All characters in words[i] and order are English lowercase letters.
  */
 
-public class AlienDict {
+public class AlienDict953 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the words using space:");

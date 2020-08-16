@@ -1,6 +1,5 @@
-package main.com.kv.solution;
+package main.com.kv.leetcode;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -18,7 +17,7 @@ import java.util.Scanner;
  * return [0, 1].
  */
 
-public class TwoSum {
+public class TwoSum1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the numbers using space:");
