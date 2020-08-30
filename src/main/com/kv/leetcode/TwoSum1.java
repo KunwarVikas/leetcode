@@ -19,17 +19,8 @@ import java.util.Scanner;
 
 public class TwoSum1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the numbers using space:");
-        String words = sc.nextLine();
-        String [] numbers = words.split("\\s");
-        int [] nums = new int[numbers.length];
-        int count=0;
-        for(String num : numbers){
-            nums[count++]=Integer.parseInt(num);
-        }
-        System.out.println("Enter the target:");
-        int target = sc.nextInt();
+        int [] nums = new int [] {1,2,3,5,6};
+        int target = 5;
         int [] output = twoSum(nums,target);
         if(output.length==2)
         System.out.println("The words in order:" +output[0] +":" +output[1]);
