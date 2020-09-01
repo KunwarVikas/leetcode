@@ -1,4 +1,4 @@
-package main.com.kv.leetcode;
+package main.com.kv.leetcode.medium;
 
 import java.util.Arrays;
 import java.util.Collections;

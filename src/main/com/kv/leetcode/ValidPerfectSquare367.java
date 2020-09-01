@@ -30,7 +30,7 @@ public class ValidPerfectSquare367 {
 
     /**
      *
-     * @param x
+     * @param
      * @return if it is perfcet square
      */
     private static boolean sqrt(int num) {
