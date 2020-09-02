@@ -1,4 +1,4 @@
-package main.com.kv.leetcode.medium;
+package main.com.kv.leetcode.hard;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
