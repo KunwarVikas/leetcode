@@ -23,7 +23,7 @@ package main.com.kv.leetcode.easy;
 public class MaxProductOf3Numbers628 {
 
     public static void main(String[] args) {
-        System.out.println(maximumProduct(new int[]{3,5,7,9,-10,-12,23}));
+        System.out.println(maximumProduct(new int[]{5,5,5,5,2,4-1,-2,2}));
     }
 
     /**
