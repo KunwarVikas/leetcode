@@ -52,23 +52,22 @@ public class EmployeeFreeTime759 {
      * @return
      */
     public static List<Interval> employeeFreeTime(List<List<Interval>> schedule){
-        PriorityQueue<Interval> que = new PriorityQueue<>((a, b) -> a.start - b.start);
+        PriorityQueue<Interval> priorityQueue = new PriorityQueue<>((a, b) -> a.start - b.start);
         for (List<Interval> list : schedule) {
             for (Interval i : list) {
-                que.add(i);
+                priorityQueue.add(i);
             }
         }
-
-        List<Interval> rt = new ArrayList<>();
+        List<Interval> freeIntervals = new ArrayList<>();
         int max = -1;
-        while (!que.isEmpty()) {
-            Interval top = que.poll();
+        while (!priorityQueue.isEmpty()) {
+            Interval top = priorityQueue.poll();
             if (max != -1 && top.start > max) {
-                rt.add(new Interval(max, top.start));
+                freeIntervals.add(new Interval(max, top.start));
             }
             max = Math.max(max, top.end);
         }
-        return rt;
+        return freeIntervals;
     }
 
 
