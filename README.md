@@ -1,2 +1,3 @@
 # Problem Solving and Coding
-This repo is dedicated to solve simple, tricky, and complex coding questions in Java.
+This repo is about Hard, Medium, and Easy Leetcode questions.
+It also has coding questions asked FB, Google, MS, Uber etc.
