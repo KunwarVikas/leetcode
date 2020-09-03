@@ -1,6 +1,6 @@
 package main.com.kv.leetcode.easy;
 
-public class MakeArraysEqual1460 {
+public class ReverseToMakeArraysEqual1460 {
     public static void main(String[] args) {
         int [] target = new int [] {1,2,3,4};
         int [] arr = new int [] {1,3,4,2};
