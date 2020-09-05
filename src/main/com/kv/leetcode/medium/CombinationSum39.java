@@ -64,7 +64,7 @@ public class CombinationSum39 {
      * @param target
      * @param sum
      * @param list
-     * @param result
+     * @param result it will work on this.
      */
     private void helper(int[] candidates, int start, int target, int sum,
                         List<Integer> list, List<List<Integer>> result){
