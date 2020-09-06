@@ -4,11 +4,8 @@ import java.util.Scanner;
 
 public class FibonacciSeries {
     public static void main(String[] args) {
-        System.out.println("Enter the input for fibonacci series:");
-        Scanner sc = new Scanner(System.in);
-        int input = sc.nextInt();
-        int output = findFibonacciNumber(input);
-        System.out.println("The fibonacci series for " +input+ " is: "+output);
+        int input = 7;
+        System.out.println("The fibonacci series for " +input+ " is: "+findFibonacciNumber(7));
     }
 
     /**

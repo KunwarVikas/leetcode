@@ -20,18 +20,8 @@ import java.util.*;
  */
 public class SingleNumberI136 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the numbers using space:");
-        String words = sc.nextLine();
-        String [] numbers = words.split("\\s+");
-        int [] nums = new int[numbers.length];
-        int count=0;
-        for(String num : numbers){
-            nums[count++]=Integer.parseInt(num);
-        }
-        
-        int result = findTheOddNumber(nums);
-        System.out.println("The odd number is: "+result);
+        int [] nums = new int[]{4,1,2,1,2};
+        System.out.println("The odd number is: "+findTheOddNumber(nums));
     }
 
     /**

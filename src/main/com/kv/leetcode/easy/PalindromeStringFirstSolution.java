@@ -4,15 +4,12 @@ import java.util.Scanner;
 
 public class PalindromeStringFirstSolution {
     public static void main(String[] args) {
-        System.out.print("Enter the input string: ");
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-        boolean output = checkIfPalindrome(input);
+        boolean output = checkIfPalindrome("abcdcba");
         if(output) {
-            System.out.println("The string " +input+ " is palindrome");
+            System.out.println("Palindrome");
         }
         else {
-            System.out.println("The string " +input+ " is not a palindrome");
+            System.out.println("Not Palindrome");
         }
 
     }

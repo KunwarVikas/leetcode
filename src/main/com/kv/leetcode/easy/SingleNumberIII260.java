@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
+ * Given an array of numbers nums, in which exactly two elements appear only once
+ * and all the other elements appear exactly twice. Find the two elements that appear only once.
  *
  * Example:
  *
@@ -18,16 +19,7 @@ import java.util.Scanner;
  */
 public class SingleNumberIII260 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the numbers using space:");
-        String words = sc.nextLine();
-        String [] numbers = words.split("\\s+");
-        int [] nums = new int[numbers.length];
-        int count=0;
-        for(String num : numbers){
-            nums[count++]=Integer.parseInt(num);
-        }
-
+        int [] nums = new int[]{1,2,1,3,2,5};
         int [] result = findTheOddNumber(nums);
         System.out.println("The odd number is: "+result[0]+" "+result[1]);
     }

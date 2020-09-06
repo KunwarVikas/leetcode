@@ -22,16 +22,7 @@ import java.util.Scanner;
 public class MajorityElement169 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the numbers using space:");
-        String words = sc.nextLine();
-        String [] numbers = words.split("\\s+");
-        int [] nums = new int[numbers.length];
-        int count=0;
-        for(String num : numbers){
-            nums[count++]=Integer.parseInt(num);
-        }
-
+        int [] nums = new int[]{3,2,3};
         int result = findMajorityNumber(nums);
         System.out.println("The odd number is: "+result);
     }

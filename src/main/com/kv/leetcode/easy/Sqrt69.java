@@ -3,9 +3,6 @@ package main.com.kv.leetcode.easy;
 public class Sqrt69 {
     public static void main(String[] args) {
         int A = 2147395600;
-        System.out.println(A);
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.MIN_VALUE);
         System.out.println(sqrt(A));
     }
 

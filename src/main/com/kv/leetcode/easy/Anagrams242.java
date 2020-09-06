@@ -18,13 +18,7 @@ import java.util.Scanner;
  */
 public class Anagrams242 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the first word:");
-        String s1 = sc.next();
-        System.out.println("Enter the second word:");
-        String s2 = sc.next();
-        boolean output = checkIfWordsAreAnagrams(s1,s2);
-        System.out.println("The words are anagrams:" +output);
+        System.out.println("The words are anagrams:" +checkIfWordsAreAnagrams("abc","bca"));
     }
 
     /**

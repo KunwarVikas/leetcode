@@ -48,10 +48,6 @@ public class FirstMissingPositive41 {
     static int findMissingPositive(int arr[], int size)
     {
         int i;
-        // Mark arr[i] as visited by making
-        // arr[arr[i] - 1] negative. Note that
-        // 1 is subtracted because index start
-        // from 0 and positive numbers start from 1
         for (i = 0; i < size; i++) {
             int x = Math.abs(arr[i]);
             if (x - 1 < size && arr[x - 1] > 0)

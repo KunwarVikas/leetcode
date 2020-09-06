@@ -23,8 +23,7 @@ package main.com.kv.leetcode.easy;
  */
 public class PalindromeNumber9 {
     public static void main(String[] args) {
-        int i = 12321;
-        System.out.println(checkPalindrome(i));
+        System.out.println(checkPalindrome(12321));
     }
 
     /**

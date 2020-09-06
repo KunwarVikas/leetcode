@@ -3,7 +3,8 @@ package main.com.kv.leetcode.easy;
 import java.util.Scanner;
 
 /**
- * Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+ * Given an array containing n distinct numbers taken from 0, 1, 2, ..., n,
+ * find the one that is missing from the array.
  *
  * Example 1:
  *
@@ -19,18 +20,8 @@ import java.util.Scanner;
  */
 public class MissingNumber268 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the numbers using space:");
-        String words = sc.nextLine();
-        String [] numbers = words.split("\\s+");
-        int [] nums = new int[numbers.length];
-        int count=0;
-        for(String num : numbers){
-            nums[count++]=Integer.parseInt(num);
-        }
-
-        int result = missingNumber(nums);
-        System.out.println("The odd number is: "+result);
+       int [] nums = new int[]{9,6,4,2,3,5,7,0,1};
+       System.out.println("The odd number is: "+missingNumber(nums));
     }
 
     /**

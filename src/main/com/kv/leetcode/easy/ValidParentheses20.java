@@ -35,11 +35,7 @@ import java.util.Stack;
  */
 public class ValidParentheses20 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the string:");
-        String s1 = sc.next();
-        boolean output = checkIfValidParentheses(s1);
-        System.out.println("The string is valid parentheses:" +output);
+        System.out.println("The string is valid parentheses:" +checkIfValidParentheses("{[]}"));
     }
 
     /**

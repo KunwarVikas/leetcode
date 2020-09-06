@@ -36,7 +36,6 @@ public class MeetingRoom252 {
                 return false;
             }
         }
-
         return true;
     }
 

@@ -5,7 +5,8 @@ import com.sun.management.MissionControlMXBean;
 /**
  * An array is monotonic if it is either monotone increasing or monotone decreasing.
  *
- * An array A is monotone increasing if for all i <= j, A[i] <= A[j].  An array A is monotone decreasing if for all i <= j, A[i] >= A[j].
+ * An array A is monotone increasing if for all i <= j, A[i] <= A[j].
+ * An array A is monotone decreasing if for all i <= j, A[i] >= A[j].
  *
  * Return true if and only if the given array A is monotonic.
  *
@@ -41,8 +42,7 @@ import com.sun.management.MissionControlMXBean;
 public class MonotoniArray896 {
     public static void main(String[] args) {
         int [] arr = new int[]{1,2,3,4,4,5};
-        boolean result = isMonotonic(arr);
-        System.out.println(result);
+        System.out.println(isMonotonic(arr));
     }
 
     /**
@@ -59,6 +59,10 @@ public class MonotoniArray896 {
             }
             if(A[i]<A[i+1]){
                 decrease = false;
+            }
+            if(A[i]==A[i+1]){
+                increase = true;
+                decrease = true;
             }
         }
         return  increase || decrease;
