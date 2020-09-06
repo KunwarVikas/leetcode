@@ -1,4 +1,6 @@
-package main.com.kv.leetcode.medium.mergesortedlists;
+package main.com.kv.leetcode.medium;
+
+import main.com.kv.leetcode.ListNode;
 
 public class MergeTwoSortedLists21 {
     public static void main(String[] args) {
