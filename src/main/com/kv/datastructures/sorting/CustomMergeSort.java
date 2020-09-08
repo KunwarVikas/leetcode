@@ -11,17 +11,17 @@ public class CustomMergeSort {
     private int[] tempMergeSortArray;
     private int length;
 
-    /**
-     * main method
-     * @param a
-     */
-    public static void main(String a[]){
+    public static void main(String args[]){
         int[] inputArray = {45,23,11,89,77,98,4,28,65,43};
         CustomMergeSort customMergeSort = new CustomMergeSort();
         customMergeSort.sort(inputArray);
         Arrays.stream(inputArray).forEach(i-> System.out.println(i+" "));
     }
 
+    /**
+     * driver method, can be called from test cases
+     * @param inputArray
+     */
     public void sort(int inputArray[]) {
         this.array = inputArray;
         this.length = inputArray.length;
