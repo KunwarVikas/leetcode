@@ -15,10 +15,10 @@ public class MergeSortTest {
     }
 
     @Test
-    public void positiveTest() {
-        int[] actual = { 5, 1, 6, 2, 3, 4 };
-        int[] expected = { 1, 2, 3, 4, 5, 6 };
-        customMergeSort.sort(actual);
+    public void test_sorted_arrays() {
+        int[] actual = { 51, 15, 61, 25, 33, 42,87 };
+        int[] expected = { 15, 25, 33, 42, 51, 61,87 };
+        customMergeSort.mergeSort(actual,actual.length);
         assertArrayEquals(expected, actual);
     }
 }

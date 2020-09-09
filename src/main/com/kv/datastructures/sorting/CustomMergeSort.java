@@ -7,73 +7,62 @@ import java.util.Arrays;
  * It uses divide and conquer algorithm to achieve sorting.
  */
 public class CustomMergeSort {
-    private int[] array;
-    private int[] tempMergeSortArray;
-    private int length;
-
     public static void main(String args[]){
         int[] inputArray = {45,23,11,89,77,98,4,28,65,43};
         CustomMergeSort customMergeSort = new CustomMergeSort();
-        customMergeSort.sort(inputArray);
+        customMergeSort.mergeSort(inputArray,inputArray.length);
         Arrays.stream(inputArray).forEach(i-> System.out.println(i+" "));
     }
 
-    /**
-     * driver method, can be called from test cases
-     * @param inputArray
-     */
-    public void sort(int inputArray[]) {
-        this.array = inputArray;
-        this.length = inputArray.length;
-        this.tempMergeSortArray = new int[length];
-        mergeSort(0, length - 1);
-    }
-
-    /**
+     /**
      * Divide input array into multiple sub-arrays, sort them, and then merge sub-arrays in order to sort the
      * main input array. This entire functionality will be called recursively.
-     * @param low
-     * @param high
+     * @param inputArr
+     * @param len
      */
-    private void mergeSort(int low, int high) {
-        if (low < high) {
-            int mid = low + (high - low) / 2; //avoid out of bound exception
-            // recursive calls to sort left and right sub-arrays
-            mergeSort(low, mid);
-            mergeSort(mid + 1, high);
-            // This method will merge the sub-arrays
-            mergeSubArrays(low, mid, high);
+    public void mergeSort(int [] inputArr,int len) {
+        if(len<2){
+            return;
         }
+
+        int mid = len/2;
+        int [] left = new int[mid];
+        int [] right = new int[len-mid];
+        for (int i = 0; i < mid; i++) {
+            left[i] = inputArr[i];
+        }
+
+        for (int i = mid; i < len; i++) {
+            right[i - mid] = inputArr[i];
+        }
+        mergeSort(left, mid);
+        mergeSort(right, len - mid);
+        merge(inputArr, left, right, mid, len - mid);
     }
 
     /**
-     * Merge sub-arrays.
-     * @param low
-     * @param mid
-     * @param high
+     *
+     * @param inputArr
+     * @param left
+     * @param right
+     * @param leftLen
+     * @param rightLen
      */
-    private void mergeSubArrays(int low, int mid, int high) {
-
-        for (int i = low; i <= high; i++) {
-            tempMergeSortArray[i] = array[i];
-        }
-        int i = low;
-        int j = mid + 1;
-        int k = low;
-        while (i <= mid && j <= high) {
-            if (tempMergeSortArray[i] <= tempMergeSortArray[j]) {
-                array[k] = tempMergeSortArray[i];
-                i++;
-            } else {
-                array[k] = tempMergeSortArray[j];
-                j++;
+    private void merge(int[] inputArr, int[] left, int[] right, int leftLen, int rightLen) {
+        int i = 0, j = 0, k = 0;
+        while (i < leftLen && j < rightLen) {
+            if (left[i] <= right[j]) {
+                inputArr[k++] = left[i++];
             }
-            k++;
+            else {
+                inputArr[k++] = right[j++];
+            }
         }
-        while (i <= mid) {
-            array[k] = tempMergeSortArray[i];
-            k++;
-            i++;
+        while (i < leftLen) {
+            inputArr[k++] = left[i++];
+        }
+        while (j < rightLen) {
+            inputArr[k++] = right[j++];
         }
     }
 }
