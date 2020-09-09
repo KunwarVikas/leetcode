@@ -15,7 +15,7 @@ public class MergeSortTest {
     }
 
     @Test
-    public void test_sorted_arrays() {
+    public void test_merge_sort() {
         int[] actual = { 51, 15, 61, 25, 33, 42,87 };
         int[] expected = { 15, 25, 33, 42, 51, 61,87 };
         customMergeSort.mergeSort(actual,actual.length);
