@@ -1,5 +1,7 @@
 package main.com.kv.leetcode.easy;
 
+import main.com.kv.leetcode.Interval;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -17,20 +19,13 @@ public class MeetingRoom252 {
         intervals[0] = new Interval(0, 30);
         intervals[1] = new Interval(5, 10);
         intervals[2] = new Interval(15, 20);
-        boolean result = checkIfPersonCanAttendAll(intervals);
-        System.out.println("A person can attend all the meetings:" + result);
+        System.out.println("A person can attend all the meetings:" + checkIfPersonCanAttendAll(intervals));
     }
 
     private static boolean checkIfPersonCanAttendAll(Interval[] intervals) {
         if (intervals == null || intervals.length == 0)
             return false;
-        Arrays.sort(intervals, new Comparator<Interval>() {
-            @Override
-            public int compare(Interval o1, Interval o2) {
-                return o1.start-o2.start;
-            }
-        });
-
+        Arrays.sort(intervals,(a,b)->a.start-b.start);
         for(int i=0; i<intervals.length;i++){
             if(intervals[i].end > intervals[i+1].start){
                 return false;
@@ -38,15 +33,4 @@ public class MeetingRoom252 {
         }
         return true;
     }
-
-
-    static class Interval {
-        int start;
-        int end;
-        public Interval(int start, int end) {
-            this.start = start;
-            this.end = end;
-        }
-    }
-
 }
