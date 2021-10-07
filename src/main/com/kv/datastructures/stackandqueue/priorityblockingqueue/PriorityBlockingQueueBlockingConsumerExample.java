@@ -15,7 +15,7 @@ public class PriorityBlockingQueueBlockingConsumerExample {
                 while(true)
                 {
                     Integer poll = priorityBlockingQueue.take();
-                    System.out.println("Polled : " + poll);
+                    System.out.println("Polled Item : " + poll);
                     Thread.sleep(TimeUnit.SECONDS.toMillis(1));
                 }
             } catch (InterruptedException e) {
